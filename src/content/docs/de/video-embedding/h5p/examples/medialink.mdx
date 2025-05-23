@@ -1,0 +1,51 @@
+---
+title: "H5P mit MedienLink"
+description: Anleitung zur Einbettung von Videos in H5P-Aktivitäten über MedienLink
+sidebar:
+  order: 2
+---
+import { Steps } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import MediaFrame from '/src/components/MediaFrame.astro';
+
+#### Kurzanleitung: Einbettung von Videos in H5P-Aktivitäten über MedienLink
+<Steps>
+
+1. **In den Bearbeitungsmodus wechseln**
+    - Öffne die Plattform, auf der du H5P nutzt (z. B. Moodle).
+    - Klicke auf die Option, um den Bearbeitungsmodus zu aktivieren.
+
+2. **Aktivität oder Material anlegen**
+    - Wähle die Funktion „Aktivität oder Material anlegen“ aus.
+    - Scrolle durch die Optionen und wähle „Interaktive Inhalte“ (H5P).
+
+3. **Inhaltstyp auswählen**
+    - Im H5P-Editor siehst du eine Liste von Inhaltstypen.
+    - Nutze die Suchleiste, um den gewünschten Inhaltstyp (z. B. „Multiple Choice“) einzugeben und auszuwählen.
+    - Vergleiche die Tabelle, um passende Aktivitäten zu finden die mit MedienLink funktionieren
+    - Hinweis: Oben in der Anzeige findest du Links zu einem Tutorial und einem Beispiel, die bei der Erstellung helfen können.
+
+4. **ProVision nutzen, um Video einzubinden**
+    - Im Videoportal (z. B. ProVision) einloggen
+    - Das passende Video in Videoportal finden.
+    - Das Video auswählen und den Bereich „Informationen“ öffnen.
+    - Den Einbettungslink kopieren.
+
+5. **Video-URL einfügen**
+    - Typ: 
+    Klicke auf Medium auswählen, öffne das Dropdown-Menü, wähle „Video“ aus.
+
+    - Videoquellen:
+    Füge den zuvor kopierten Einbettungslink von ProVision in das H5P-Feld für die Video-URL ein und ergänze zudem „&media“ am Ende des Link, um einen MediaLink zu erzeugen.
+
+6. **Inhalte speichern**
+    - Prüfe die Einstellungen und Vorschau.
+    - Speichere die interaktive Aktivität und füge sie deinem Kurs hinzu.
+</Steps>
+
+Fertig! 🎉
+
+<details>
+    <summary>Video-Beispiel: Multiple-Choice-H5P-Aktivität</summary>
+    <MediaFrame width="600px" src="https://player.uni-muenster-unterrichtsvideos.educast.nrw/a35b9bc2-05ae-45ef-84d1-ddc4bc2667e1" />
+</details>

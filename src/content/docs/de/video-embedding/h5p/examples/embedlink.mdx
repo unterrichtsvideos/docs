@@ -1,0 +1,40 @@
+---
+title: "H5P mit EinbettungsLink"
+description: Anleitung zur Einbettung von Videos in h5p Inhaltstypen
+sidebar:
+  order: 1
+---
+import { Steps } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import MediaFrame from '/src/components/MediaFrame.astro';
+
+#### Kurzanleitung: Einbettung von Videos in H5P-Aktivitäten über "EinbettungsLink"
+<Steps>
+    1. **In den Bearbeitungsmodus wechseln**
+        - Öffne die Plattform, auf der du H5P nutzt (z. B. Moodle).
+        - Klicke auf die Option, um den Bearbeitungsmodus zu aktivieren.
+    
+    2. **Aktivität oder Material anlegen**
+        - Wähle die Funktion „Aktivität oder Material anlegen“ aus.
+        - Scrolle durch die Optionen und wähle „Interaktive Inhalte“ (H5P).
+    
+    3. **Inhaltstyp auswählen**
+        - Im H5P-Editor siehst du eine Liste von Inhaltstypen.
+        - Nutze die Suchleiste, um den gewünschten Inhaltstyp (z. B. „Iframe Embedder“) einzugeben und auszuwählen.
+        - Vergleiche die Tabelle, um passende Aktivitäten zu finden die mit EinebttungsLink funktionieren
+    
+    4. **ProVision nutzen, um Video einzubinden**
+        - Auf ProVision einloggen: Melde dich in deinem Provision-Account an.
+        - Finde das passende Video in der Mediathek.
+        - Wähle das Video aus und öffne den Bereich „Informationen“.
+        - Kopiere den EinbettungsLink aus der Anzeige.
+        
+    5. **Video-URL einfügen**
+        - Nutze den EinbettungsLink als Quelle.
+        - Hinweis: Wenn Iframe Embedder genutzt wird sollten Breite, Minimal Breite und Höhe auf "100%" eingestellt sein
+        
+    6. **Inhalte speichern**
+        - Prüfe die Einstellungen und Vorschau.
+        - Speichere die interaktive Aktivität und füge sie deinem Kurs hinzu.
+</Steps>
+Fertig! 🎉
