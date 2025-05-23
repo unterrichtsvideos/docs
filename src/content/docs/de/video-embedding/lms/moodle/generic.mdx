@@ -1,0 +1,82 @@
+---
+title: "via Text-/Beschreibungsfeld"
+description: Anleitung zur Einbettung von Videos in einem Text-/Beschreibungsfeld
+sidebar:
+  order: 20
+---
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+import MediaFrame from '/src/components/MediaFrame.astro';
+
+### Anleitung: Einbettung von Videos in einem Text-/Beschreibungsfeld
+**Erfordert: Einbettungscode**
+
+Insofern die Moodle Aktivität über ein Text-/Beschreibungsfeld (Moodle-Editor) verfügt, kann das Video womöglich mit einem Einbettungscode eingebunden werden.
+
+**Kurzanleitung:**
+
+- EmbedCode: Einbettungscode erstellen/kopieren
+- Je nach Moodle-Editor den erstellten EmbedCode einfügen:
+    - über das Editor-Symbol `</>` für Quellcode-/text bzw. HTML 
+    - alternativ: über (Inhalt) > Werkzeuge > Quellcode (ggf. auch Quelltext / HTML) 
+    - optional:
+        - Option "Beschreibung im Kurs anzeigen" wählen
+        - Über diese Option kann das Video direkt auf der Kursseite dargestellt werden (falls es sich hierbei um das Beschreibungsfeld für eine Moodle-Aktivität handelt)
+
+<details>
+    <summary>Video-Kurzanleitung</summary>
+    <MediaFrame width="600px" src="https://player.uni-muenster-unterrichtsvideos.educast.nrw/6e8b38c8-a98e-4203-8361-302aaf7044f4" />
+</details>
+
+**Schritt für Schritt Anleitung:**
+
+<Steps>
+    1. In den Bearbeitungsmodus wechseln
+        - Öffne die Moodle-Plattform und den entsprechenden Moodle-Kurs, auf der du eine Moodle-Aktivität erstellen möchtest.
+        - Klicke auf die Option, um den Bearbeitungsmodus zu aktivieren (Bearbeitungsrechte für den Moodle-Kurs erforderlich).
+
+        <details>
+            <summary>Screenshot: Bearbeitungsmodus</summary>
+            ![Bearbeitungsmodus](img/moodle_embedcode_1.png)
+        </details>
+
+    2. Aktivität oder Material anlegen
+        - Wähle im Kursbereich „Aktivität oder Material anlegen“.
+        - Entscheide dich für eine geeignete Aktivität (z. B. „Test“, „Aufgabe“ oder „Forum“) oder ein Material (z. B. „Link/URL“).
+
+        <details>
+            <summary>Screenshot: Aktivität anlegen</summary>
+            ![Aktivität anlegen](img/moodle_embedcode_2.png)
+        </details>
+
+    3. Einbettungscode einfügen
+        - Gehe im Editor zur Beschreibung oder dem Textfeld der Aktivität.
+        - Klicke auf den Reiter „Werkzeug“.
+        - Wähle „Quellcode“ / "Quelltext" oder "HTML" aus (häufige Symbole: `<⁄>` oder `<>`), um den HTML-Modus des Moodle-Editors zu öffnen.
+        - Füge den EmbedCode (Einbettungscode mit dem entsprechenden EmbedLink deines Videos) ein.
+
+        <details>
+            <summary>Screenshots: Editor</summary>
+            <Tabs>
+                <TabItem label="Editor: Werkzeuge > Quellcode">![Editor: Werkzeuge > Quellcode](img/moodle_embedcode_3.1a.png)</TabItem>
+                <TabItem label="Editor: Quellcode-Symbol">![Editor: Quellcode-Symbol](img/moodle_embedcode_3.1b.png)</TabItem>
+                <TabItem label="Beispiel">![Beispiel](img/moodle_embedcode_3.2.png)</TabItem>
+            </Tabs>
+        </details>
+
+    4. Videovorschau prüfen
+        - Verlasse den Quellcode-Modus, indem du erneut die Quellcode-Schaltfläche anwählst.
+        - Im Textfeld sollte nun eine Videovorschau sichtbar sein.
+        - Das Video ist nun in der Beschreibung der Aktivität sichtbar.
+
+        <details>
+            <summary>Screenshot: Videovorschau</summary>
+            ![Videovorschau](img/moodle_embedcode_4.png)
+        </details>
+
+    5. Speichern
+        - Scrolle nach unten und klicke auf „Speichern und anzeigen“, um sicherzustellen, dass das Video korrekt eingebettet wurde.
+        - Das Video ist jetzt in der Moodle-Aktivität verfügbar.
+</Steps>
+
+Fertig! 🎉

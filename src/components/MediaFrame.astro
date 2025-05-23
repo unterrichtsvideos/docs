@@ -1,0 +1,37 @@
+---
+interface Props {
+    src: string;
+    title?: string;
+    width?: string | number;
+    height?: string | number;
+    frameborder?: string | number;
+    loading?: 'eager' | 'lazy';
+    caption?: string;
+    class?: string;
+    style?: string;
+}
+
+const { 
+    src,
+    title = '',
+    width = '960px',
+    // Calculate 16:9 aspect ratio if height is not provided
+    height = typeof width === 'number'
+        ? `${Math.round((width / 16) * 9)}px`
+        : (typeof width === 'string' && width.endsWith('px'))
+            ? `${Math.round((parseInt(width) / 16) * 9)}px`
+            : '540px',
+    loading = 'lazy',
+    class: className = '',
+} = Astro.props;
+---
+
+<iframe allowfullscreen
+    class={className}
+    title={title}
+    aria-label={title}
+    src={src}
+    loading={loading}
+    style={`min-height: ${height}; min-width: ${width}; border: 0;`}
+    allow="accelerometer; autoplay; encrypted-media; fullscreen; gyroscope; picture-in-picture; xr-spatial-tracking">
+</iframe>

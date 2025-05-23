@@ -1,0 +1,28 @@
+---
+title: "Übersicht: H5P Inhaltstypen"
+description: Anleitung zur Einbettung von Videos in h5p Inhaltstypen
+sidebar:
+  order: 1
+---
+import { Steps } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import MediaFrame from '/src/components/MediaFrame.astro';
+
+### Übersicht: H5P-Aktivitäten
+
+| Aktivitätenname       | Einbettungslink         | Einbettungscode         | Medienlink               | Kommentar                                                                                   | Beispiel                                           |
+|-----------------------|--------------------------|--------------------------|--------------------------|---------------------------------------------------------------------------------------------|----------------------------------------------------|
+| Iframe Embedder       | ✅ ja                     | ☑️ ja, nicht empfohlen    | ☑️ ja, nicht empfohlen    |                                                                                             |                                                    |
+| Video                 | ❌ nein                   | ❌ nein                   | ✅ ja                     |                                                                                             |                                                    |
+| Interaktives Video    | ❌ nein                   | ☑️ nur Beschreibung       | ✅ ja                     | Video einbettbar via „Medien“                                                               | Videos mit interaktiven Elementen wie Fragen oder Links |
+| Interaktives Buch     | ✅ ja, via Iframe Embedder| ✅ ja                     | ✅ ja                     | Login für Medienlink einbettbar via iframe Embedder; Video einbettbar via Sub-Aktivitäten „iframe Embedder“, „Video“ und „Interaktives Video“ |                                                    |
+| Fill in the Blanks    | ❌ nur als Link           | ☑️ nur Beschreibung       | ✅ ja                     | Video einbettbar via „Medien“                                                               | Lückentext mit Videoeinbindung                    |
+| Multiple Choice       | ❌ nur als Link           | ☑️ nur Beschreibung       | ✅ ja                     | Video einbettbar via „Medien“                                                               | Fragen basierend auf Videoinhalten                |
+| True/False Question   | ❌ nur als Link           | ☑️ nur Beschreibung       | ✅ ja                     | Video einbettbar via „Medien“                                                               | Wahr/Falsch-Fragen mit Bezug zum Video            |
+| Essay                 | ❌ nur als Link           | ☑️ nur Beschreibung       | ✅ ja                     | Video einbettbar via „Medien“                                                               | Freitextaufgaben mit Video als Grundlage          |
+| Single Choice         | ❌ nur als Link           | ☑️ nur Beschreibung       | ☑️ nur Beschreibung       |                                                                                             |                                                    |
+| Branching Scenario    | ❌ nein                   | ☑️ nur Beschreibung       | ✅ ja                     | Video einbettbar via Sub-Aktivitäten                                                        |                                                    |
+| Course Presentation   | ❌ nur als Link           | ☑️ nur Beschreibung       | ✅ ja                     |                                                                                             | Video auf ein Slide der Präsentation einfügen     |
+| Speak the words       | ❌ nur als Link           | ☑️ nur Beschreibung       | ✅ ja                     |                                                                                             |                                                    |
+| Guess the Answer      | ❌ nur als Link           | ☑️ nur Beschreibung       | ✅ ja                     |                                                                                             |                                                    |
+| Cornell Notes         | ❌ nur als Link           | ☑️ nur Beschreibung       | ✅ ja                     |                                                                                             | Nur bei IQSH                                       |
