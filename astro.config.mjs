@@ -32,8 +32,9 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: 'Einbettung von Videos',
-					translations: { 'en': 'Embedding videos' },
-					autogenerate: { directory: 'de/video-embedding' },
+					items: [
+						{ autogenerate: { directory: 'de/video-embedding' } },
+					],
 				}
 			],
 		}),
